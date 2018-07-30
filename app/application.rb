@@ -22,8 +22,9 @@ class Application
       end
     elsif req.path.match(/add/)
       item_to_add = req.params["item"]
-      if @@items.each {|item| }
-        resp.write "Your cart is empty"
+      if @@items.include? item_to_add
+        @@cart << item_to_add
+        resp.write "#{item_to_add} added"
       else
         @@cart.each {|item| resp.write "#{item}\n" }
       end
