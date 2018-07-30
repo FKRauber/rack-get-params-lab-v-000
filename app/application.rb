@@ -24,7 +24,7 @@ class Application
       item_to_add = req.params["item"]
       if @@items.include? item_to_add
         @@cart << item_to_add
-        resp.write "#{item_to_add} added"
+        resp.write "added #{item_to_add}"
       else
         @@cart.each {|item| resp.write "#{item}\n" }
       end
