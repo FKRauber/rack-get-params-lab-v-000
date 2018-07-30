@@ -26,7 +26,7 @@ class Application
         @@cart << item_to_add
         resp.write "added #{item_to_add}"
       else
-        @@cart.each {|item| resp.write "#{item}\n" }
+        resp.write "We don't have that item!"
       end
     else
       resp.write "Path Not Found"
