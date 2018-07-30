@@ -29,7 +29,7 @@ class Application
         @@cart.each {|item| resp.write "#{item}\n" }
       end
     else
-      resp.write "We don't have that item!"
+      resp.write "Path Not Found"
     end
 
     resp.finish
